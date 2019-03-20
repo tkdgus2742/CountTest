@@ -10,11 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        label.text = "0"
     }
-
+    @IBAction func bt(_ sender: Any) {
+        
+        if count < 10 {
+            count = count + 1
+            print(count)
+            label.text = String(count)
+        }
+        
+        if count == 10 {
+            count = 0
+            label.text = String(count)
+            
+    }
+    
 
 }
 
+}
